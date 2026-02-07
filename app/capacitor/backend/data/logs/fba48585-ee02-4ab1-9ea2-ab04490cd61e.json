@@ -1,0 +1,18 @@
+{
+  "id": "fba48585-ee02-4ab1-9ea2-ab04490cd61e",
+  "entityId": "95f9df78-90df-012d-abfb-863f41f5bb26",
+  "roomId": "44310a2a-5751-00e5-8c04-c02638c8bd1f",
+  "body": {
+    "runId": "8c74ad9f-8f64-4e1b-bdf7-3fc83e3f4003",
+    "status": "completed",
+    "messageId": "77bccc81-774f-4378-bcc9-af695b733860",
+    "roomId": "44310a2a-5751-00e5-8c04-c02638c8bd1f",
+    "entityId": "95f9df78-90df-012d-abfb-863f41f5bb26",
+    "startTime": 1768379108367,
+    "endTime": 1768379108380,
+    "duration": 13,
+    "source": "messageHandler"
+  },
+  "type": "run_event",
+  "createdAt": "2026-01-14T08:25:08.380Z"
+}

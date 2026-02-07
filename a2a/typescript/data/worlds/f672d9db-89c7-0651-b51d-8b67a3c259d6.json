@@ -1,0 +1,9 @@
+{
+  "id": "f672d9db-89c7-0651-b51d-8b67a3c259d6",
+  "name": "World for server 0a39fe2e-59bb-0ac2-8ea7-06d5412e9f84",
+  "agentId": "b850bc30-45f8-0041-a00a-83df46d8555d",
+  "messageServerId": "0a39fe2e-59bb-0ac2-8ea7-06d5412e9f84",
+  "metadata": {
+    "callerAgentId": "test-agent-001"
+  }
+}

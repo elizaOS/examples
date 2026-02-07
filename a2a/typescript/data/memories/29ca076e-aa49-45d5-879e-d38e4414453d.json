@@ -1,0 +1,21 @@
+{
+  "id": "29ca076e-aa49-45d5-879e-d38e4414453d",
+  "entityId": "b850bc30-45f8-0041-a00a-83df46d8555d",
+  "agentId": "b850bc30-45f8-0041-a00a-83df46d8555d",
+  "content": {
+    "thought": "Responding with plain text model output.",
+    "actions": [
+      "REPLY"
+    ],
+    "providers": [],
+    "text": "Are you saying 'no' just to be negative?",
+    "simple": true,
+    "responseId": "29ca076e-aa49-45d5-879e-d38e4414453d",
+    "inReplyTo": "4042d3c9-473a-0620-9578-cfa0a8272f0d"
+  },
+  "roomId": "08396a1b-5e53-00a2-8a80-3fd7bf6fa10b",
+  "createdAt": 1768348107128,
+  "metadata": {
+    "type": "messages"
+  }
+}

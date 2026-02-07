@@ -1,0 +1,18 @@
+{
+  "id": "f3eea66c-d58e-4fce-a892-750f491841ac",
+  "entityId": "61a0dabb-2575-0c4f-adf6-e80a3796b147",
+  "roomId": "08396a1b-5e53-00a2-8a80-3fd7bf6fa10b",
+  "content": {
+    "text": "Can you help me understand how to integrate with other systems?",
+    "source": "a2a",
+    "channelType": "DM",
+    "callerAgentId": "test-agent-001"
+  },
+  "createdAt": 1768348107130,
+  "metadata": {
+    "type": "messages",
+    "timestamp": 1768348107130,
+    "scope": "shared"
+  },
+  "agentId": "b850bc30-45f8-0041-a00a-83df46d8555d"
+}

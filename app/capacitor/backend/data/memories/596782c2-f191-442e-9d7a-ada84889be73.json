@@ -1,0 +1,21 @@
+{
+  "id": "596782c2-f191-442e-9d7a-ada84889be73",
+  "entityId": "b850bc30-45f8-0041-a00a-83df46d8555d",
+  "agentId": "b850bc30-45f8-0041-a00a-83df46d8555d",
+  "content": {
+    "thought": "Responding with plain text model output.",
+    "actions": [
+      "REPLY"
+    ],
+    "providers": [],
+    "text": "How do you do? Please state your problem",
+    "simple": true,
+    "responseId": "596782c2-f191-442e-9d7a-ada84889be73",
+    "inReplyTo": "1cf8a4c9-e50c-0578-8f38-c19da6170a81"
+  },
+  "roomId": "44310a2a-5751-00e5-8c04-c02638c8bd1f",
+  "createdAt": 1768379108380,
+  "metadata": {
+    "type": "messages"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "4b2b7dbd-7cde-477a-8f3e-f522956ad85c",
+  "entityId": "b850bc30-45f8-0041-a00a-83df46d8555d",
+  "agentId": "b850bc30-45f8-0041-a00a-83df46d8555d",
+  "content": {
+    "thought": "Responding with plain text model output.",
+    "actions": [
+      "REPLY"
+    ],
+    "providers": [],
+    "text": "What do you think about the agent is responding with a message and no other action?",
+    "simple": true,
+    "responseId": "4b2b7dbd-7cde-477a-8f3e-f522956ad85c",
+    "inReplyTo": "c9c47533-7612-06dc-aa09-cec4fbc7c6da"
+  },
+  "roomId": "08396a1b-5e53-00a2-8a80-3fd7bf6fa10b",
+  "createdAt": 1768348107143,
+  "metadata": {
+    "type": "messages"
+  }
+}

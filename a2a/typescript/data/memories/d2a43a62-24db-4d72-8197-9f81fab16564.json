@@ -1,0 +1,18 @@
+{
+  "id": "d2a43a62-24db-4d72-8197-9f81fab16564",
+  "entityId": "61a0dabb-2575-0c4f-adf6-e80a3796b147",
+  "roomId": "08396a1b-5e53-00a2-8a80-3fd7bf6fa10b",
+  "content": {
+    "text": "Thank you for your help!",
+    "source": "a2a",
+    "channelType": "DM",
+    "callerAgentId": "test-agent-001"
+  },
+  "createdAt": 1768348107136,
+  "metadata": {
+    "type": "messages",
+    "timestamp": 1768348107136,
+    "scope": "shared"
+  },
+  "agentId": "b850bc30-45f8-0041-a00a-83df46d8555d"
+}

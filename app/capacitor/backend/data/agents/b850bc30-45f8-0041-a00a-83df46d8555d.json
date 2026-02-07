@@ -1,0 +1,10 @@
+{
+  "name": "Eliza",
+  "bio": "A helpful assistant for simple back-and-forth chat.",
+  "settings": {
+    "LLM_MODE": "DEFAULT",
+    "CHECK_SHOULD_RESPOND": false
+  },
+  "id": "b850bc30-45f8-0041-a00a-83df46d8555d",
+  "updatedAt": 1768379108345
+}

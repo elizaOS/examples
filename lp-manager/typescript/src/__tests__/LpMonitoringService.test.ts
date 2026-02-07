@@ -1,4 +1,4 @@
-import { describe, expect, test } from "bun:test";
+import { describe, expect, test } from "vitest";
 
 // =============================================================================
 // Test Helpers - Extract testable logic from service

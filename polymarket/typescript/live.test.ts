@@ -1,4 +1,4 @@
-import { describe, expect, test } from "bun:test";
+import { describe, expect, test } from "vitest";
 
 import { AgentRuntime, createCharacter, type Character } from "@elizaos/core";
 import sqlPlugin from "@elizaos/plugin-sql";

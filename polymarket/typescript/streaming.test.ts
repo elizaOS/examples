@@ -1,4 +1,4 @@
-import { describe, expect, test } from "bun:test";
+import { describe, expect, test } from "vitest";
 import { ResponseStreamExtractor } from "@elizaos/core";
 
 // Tests the ResponseStreamExtractor used by messageService.handleMessage

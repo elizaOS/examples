@@ -10,7 +10,7 @@
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
     "skipLibCheck": true,
-    "types": ["bun", "node", "react"]
+    "types": ["node"]
   }
 }
 

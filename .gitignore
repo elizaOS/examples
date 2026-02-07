@@ -25,6 +25,10 @@ target/
 .DS_Store
 Thumbs.db
 
+# ART
+.art
+art_venv
+
 # IDE
 .idea/
 .vscode/

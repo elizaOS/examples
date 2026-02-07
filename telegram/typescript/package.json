@@ -10,10 +10,10 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@elizaos/core": "workspace:*",
-    "@elizaos/plugin-openai": "workspace:*",
-    "@elizaos/plugin-sql": "workspace:*",
-    "@elizaos/plugin-telegram": "workspace:*"
+    "@elizaos/core": "next",
+    "@elizaos/plugin-openai": "next",
+    "@elizaos/plugin-sql": "next",
+    "@elizaos/plugin-telegram": "next"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

@@ -39,7 +39,7 @@
     "package.json"
   ],
   "dependencies": {
-    "@elizaos/core": "workspace:*",
+    "@elizaos/core": "next",
     "@tanstack/react-query": "^5.90.16",
     "clsx": "^2.1.1",
     "tailwind-merge": "^3.3.1",

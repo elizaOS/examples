@@ -9,13 +9,13 @@
     "dev": "bun --watch run chat.ts"
   },
   "dependencies": {
-    "@elizaos/core": "workspace:*",
-    "@elizaos/plugin-openai": "workspace:*",
-    "@elizaos/plugin-anthropic": "workspace:*",
-    "@elizaos/plugin-xai": "workspace:*",
-    "@elizaos/plugin-google-genai": "workspace:*",
-    "@elizaos/plugin-groq": "workspace:*",
-    "@elizaos/plugin-sql": "workspace:*",
+    "@elizaos/core": "next",
+    "@elizaos/plugin-openai": "next",
+    "@elizaos/plugin-anthropic": "next",
+    "@elizaos/plugin-xai": "next",
+    "@elizaos/plugin-google-genai": "next",
+    "@elizaos/plugin-groq": "next",
+    "@elizaos/plugin-sql": "next",
     "dotenv": "^16.4.5",
     "uuid": "^13.0.0"
   },

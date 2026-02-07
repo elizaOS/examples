@@ -12,8 +12,8 @@
     "bench": "bun run game.ts --bench"
   },
   "dependencies": {
-    "@elizaos/core": "workspace:*",
-    "@elizaos/plugin-sql": "workspace:*",
+    "@elizaos/core": "next",
+    "@elizaos/plugin-sql": "next",
     "@clack/prompts": "^0.11.0"
   },
   "devDependencies": {

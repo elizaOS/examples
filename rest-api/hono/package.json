@@ -9,10 +9,10 @@
     "dev": "bun --watch run server.ts"
   },
   "dependencies": {
-    "@elizaos/core": "workspace:*",
-    "@elizaos/plugin-openai": "workspace:*",
-    "@elizaos/plugin-sql": "workspace:*",
-    "@elizaos/plugin-eliza-classic": "workspace:*",
+    "@elizaos/core": "next",
+    "@elizaos/plugin-openai": "next",
+    "@elizaos/plugin-sql": "next",
+    "@elizaos/plugin-eliza-classic": "next",
     "hono": "^4.6.0",
     "uuid": "^13.0.0"
   },

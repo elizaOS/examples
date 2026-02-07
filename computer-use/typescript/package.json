@@ -3,12 +3,12 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@elizaos/core": "workspace:*",
-    "@elizaos/plugin-eliza-classic": "workspace:*",
-    "@elizaos/plugin-openai": "workspace:*",
-    "@elizaos/plugin-inmemorydb": "workspace:*",
-    "@elizaos/plugin-mcp": "workspace:*",
-    "@elizaos/plugin-computeruse": "workspace:*",
+    "@elizaos/core": "next",
+    "@elizaos/plugin-eliza-classic": "next",
+    "@elizaos/plugin-openai": "next",
+    "@elizaos/plugin-inmemorydb": "next",
+    "@elizaos/plugin-mcp": "next",
+    "@elizaos/plugin-computeruse": "next",
     "express": "^4.21.2",
     "uuid": "^11.0.5"
   },

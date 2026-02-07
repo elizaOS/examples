@@ -12,9 +12,9 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@elizaos/core": "workspace:*",
-    "@elizaos/plugin-openai": "workspace:*",
-    "@elizaos/plugin-sql": "workspace:*",
+    "@elizaos/core": "next",
+    "@elizaos/plugin-openai": "next",
+    "@elizaos/plugin-sql": "next",
     "next": "^15.1.0",
     "react": "19.2.3",
     "react-dom": "19.2.3",

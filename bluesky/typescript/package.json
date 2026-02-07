@@ -15,10 +15,10 @@
     "lint:check": "bunx @biomejs/biome check ."
   },
   "dependencies": {
-    "@elizaos/core": "workspace:*",
-    "@elizaos/plugin-bluesky": "workspace:*",
-    "@elizaos/plugin-openai": "workspace:*",
-    "@elizaos/plugin-sql": "workspace:*",
+    "@elizaos/core": "next",
+    "@elizaos/plugin-bluesky": "next",
+    "@elizaos/plugin-openai": "next",
+    "@elizaos/plugin-sql": "next",
     "dotenv": "^17.2.3",
     "uuid": "^13.0.0",
     "zod": "^4.3.6"

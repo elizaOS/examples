@@ -20,9 +20,9 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@elizaos/core": "workspace:*",
-    "@elizaos/plugin-openai": "workspace:*",
-    "@elizaos/plugin-sql": "workspace:*",
+    "@elizaos/core": "next",
+    "@elizaos/plugin-openai": "next",
+    "@elizaos/plugin-sql": "next",
     "uuid": "^13.0.0"
   },
   "devDependencies": {

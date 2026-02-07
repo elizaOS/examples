@@ -9,12 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@elizaos/core": "workspace:*",
-    "@elizaos/plugin-auto-trader": "workspace:*",
-    "@elizaos/plugin-solana": "workspace:*",
-    "@elizaos/plugin-anthropic": "workspace:*",
-    "@elizaos/plugin-openai": "workspace:*",
-    "@elizaos/plugin-sql": "workspace:*",
+    "@elizaos/core": "next",
+    "@elizaos/plugin-auto-trader": "next",
+    "@elizaos/plugin-solana": "next",
+    "@elizaos/plugin-anthropic": "next",
+    "@elizaos/plugin-openai": "next",
+    "@elizaos/plugin-sql": "next",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

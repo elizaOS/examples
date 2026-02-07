@@ -12,9 +12,9 @@
     "lint:check": "bunx @biomejs/biome check ."
   },
   "dependencies": {
-    "@elizaos/core": "workspace:*",
-    "@elizaos/plugin-sql": "workspace:*",
-    "@elizaos/plugin-xai": "workspace:*",
+    "@elizaos/core": "next",
+    "@elizaos/plugin-sql": "next",
+    "@elizaos/plugin-xai": "next",
     "dotenv": "^17.2.3"
   },
   "devDependencies": {

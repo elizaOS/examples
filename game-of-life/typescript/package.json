@@ -11,8 +11,8 @@
     "stats": "bun run game.ts --stats"
   },
   "dependencies": {
-    "@elizaos/core": "workspace:*",
-    "@elizaos/plugin-sql": "workspace:*",
+    "@elizaos/core": "next",
+    "@elizaos/plugin-sql": "next",
     "@clack/prompts": "^0.11.0"
   },
   "devDependencies": {

@@ -15,9 +15,9 @@
     "invoke:local": "sam local invoke ElizaWorkerFunction --event ../events/chat.json"
   },
   "dependencies": {
-    "@elizaos/core": "workspace:*",
-    "@elizaos/plugin-openai": "workspace:*",
-    "@elizaos/plugin-sql": "workspace:*"
+    "@elizaos/core": "next",
+    "@elizaos/plugin-openai": "next",
+    "@elizaos/plugin-sql": "next"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.145",

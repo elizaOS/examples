@@ -37,7 +37,7 @@
     "package.json"
   ],
   "dependencies": {
-    "@elizaos/core": "workspace:*"
+    "@elizaos/core": "next"
   },
   "devDependencies": {
     "typescript": "^5.9.3"

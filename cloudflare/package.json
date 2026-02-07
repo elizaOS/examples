@@ -18,8 +18,8 @@
     "typecheck": "echo 'Cloudflare Workers use wrangler for type checking'"
   },
   "dependencies": {
-    "@elizaos/core": "workspace:*",
-    "@elizaos/plugin-openai": "workspace:*",
+    "@elizaos/core": "next",
+    "@elizaos/plugin-openai": "next",
     "uuid": "^11.0.5"
   },
   "devDependencies": {

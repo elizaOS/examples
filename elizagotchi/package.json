@@ -12,8 +12,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@elizaos/core": "workspace:*",
-    "@elizaos/plugin-localdb": "workspace:*",
+    "@elizaos/core": "next",
+    "@elizaos/plugin-localdb": "next",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },

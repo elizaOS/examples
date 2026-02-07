@@ -10,11 +10,11 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@elizaos/core": "workspace:*",
-    "@elizaos/plugin-eliza-classic": "workspace:*",
-    "@elizaos/plugin-openai": "workspace:*",
-    "@elizaos/plugin-roblox": "workspace:*",
-    "@elizaos/plugin-sql": "workspace:*",
+    "@elizaos/core": "next",
+    "@elizaos/plugin-eliza-classic": "next",
+    "@elizaos/plugin-openai": "next",
+    "@elizaos/plugin-roblox": "next",
+    "@elizaos/plugin-sql": "next",
     "express": "^4.21.2",
     "uuid": "^13.0.0"
   },

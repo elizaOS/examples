@@ -8,11 +8,11 @@
     "test": "bun run test-runner.ts"
   },
   "dependencies": {
-    "@elizaos/core": "workspace:*",
-    "@elizaos/plugin-eliza-classic": "workspace:*",
-    "@elizaos/plugin-inmemorydb": "workspace:*",
-    "@elizaos/plugin-openai": "workspace:*",
-    "@elizaos/plugin-sql": "workspace:*",
+    "@elizaos/core": "next",
+    "@elizaos/plugin-eliza-classic": "next",
+    "@elizaos/plugin-inmemorydb": "next",
+    "@elizaos/plugin-openai": "next",
+    "@elizaos/plugin-sql": "next",
     "express": "^4.18.0",
     "uuid": "^13.0.0"
   },

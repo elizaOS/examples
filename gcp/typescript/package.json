@@ -16,9 +16,9 @@
     "docker:run": "docker run -p 8080:8080 -e OPENAI_API_KEY=$OPENAI_API_KEY eliza-worker-ts"
   },
   "dependencies": {
-    "@elizaos/core": "workspace:*",
-    "@elizaos/plugin-openai": "workspace:*",
-    "@elizaos/plugin-sql": "workspace:*",
+    "@elizaos/core": "next",
+    "@elizaos/plugin-openai": "next",
+    "@elizaos/plugin-sql": "next",
     "uuid": "^13.0.0"
   },
   "devDependencies": {

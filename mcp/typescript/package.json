@@ -8,9 +8,9 @@
     "test": "bun run test-client.ts"
   },
   "dependencies": {
-    "@elizaos/core": "workspace:*",
-    "@elizaos/plugin-openai": "workspace:*",
-    "@elizaos/plugin-sql": "workspace:*",
+    "@elizaos/core": "next",
+    "@elizaos/plugin-openai": "next",
+    "@elizaos/plugin-sql": "next",
     "@modelcontextprotocol/sdk": "^1.0.0",
     "uuid": "^13.0.0"
   },

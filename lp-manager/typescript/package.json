@@ -11,9 +11,9 @@
     "test:watch": "bun test --watch"
   },
   "dependencies": {
-    "@elizaos/core": "workspace:*",
-    "@elizaos/plugin-lp-manager": "workspace:*",
-    "@elizaos/plugin-sql": "workspace:*"
+    "@elizaos/core": "next",
+    "@elizaos/plugin-lp-manager": "next",
+    "@elizaos/plugin-sql": "next"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",

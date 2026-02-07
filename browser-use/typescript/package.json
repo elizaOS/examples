@@ -8,12 +8,12 @@
     "dev": "bun run --watch server.ts"
   },
   "dependencies": {
-    "@elizaos/core": "workspace:*",
-    "@elizaos/plugin-browser": "workspace:*",
-    "@elizaos/plugin-openai": "workspace:*",
-    "@elizaos/plugin-groq": "workspace:*",
-    "@elizaos/plugin-eliza-classic": "workspace:*",
-    "@elizaos/plugin-inmemorydb": "workspace:*",
+    "@elizaos/core": "next",
+    "@elizaos/plugin-browser": "next",
+    "@elizaos/plugin-openai": "next",
+    "@elizaos/plugin-groq": "next",
+    "@elizaos/plugin-eliza-classic": "next",
+    "@elizaos/plugin-inmemorydb": "next",
     "express": "^4.18.2",
     "uuid": "^9.0.0"
   },

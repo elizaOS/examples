@@ -9,7 +9,7 @@ import { JoinScreen } from "./components/JoinScreen";
 import { useGameStore } from "./store/gameStore";
 
 function App() {
-	const { connect, joined, phase, inCombat } = useGameStore();
+	const { connect, joined, inCombat } = useGameStore();
 
 	useEffect(() => {
 		connect();
@@ -26,36 +26,24 @@ function App() {
 						<CharacterPanel />
 						{inCombat && <InitiativeTracker />}
 					</div>
-					<div className="col-span-6 flex flex-col gap-4">
-						<div className="flex-1 rounded-lg overflow-hidden border border-slate-700 bg-slate-800/50">
-							{inCombat ? (
-								<BattleMap />
-							) : (
-								<div className="h-full flex items-center justify-center">
-									<div className="text-center p-8 max-w-md">
-										<h2
-											className="text-2xl text-amber-400 mb-4"
-											style={{ fontFamily: "serif" }}
-										>
-											{phase === "exploration" && "Exploring..."}
-											{phase === "social" && "In Conversation"}
-											{phase === "rest" && "Resting..."}
-											{phase === "narration" && "The Story Unfolds"}
-											{phase === "initializing" && "Preparing the Adventure..."}
-										</h2>
-										<p className="text-slate-300">
-											The adventure continues. Use the action bar below to
-											interact with the world.
-										</p>
-									</div>
+					{inCombat ? (
+						<>
+							<div className="col-span-6 flex flex-col gap-4">
+								<div className="flex-1 rounded-lg overflow-hidden border border-slate-700 bg-slate-800/50">
+									<BattleMap />
 								</div>
-							)}
+								<ActionBar />
+							</div>
+							<div className="col-span-3">
+								<AdventureLog />
+							</div>
+						</>
+					) : (
+						<div className="col-span-9 flex flex-col gap-4">
+							<AdventureLog />
+							<ActionBar />
 						</div>
-						<ActionBar />
-					</div>
-					<div className="col-span-3">
-						<AdventureLog />
-					</div>
+					)}
 				</div>
 			</div>
 		</div>

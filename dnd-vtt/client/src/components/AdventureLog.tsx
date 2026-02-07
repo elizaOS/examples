@@ -3,12 +3,11 @@ import { useEffect, useRef } from "react";
 import { type LogEntry, useGameStore } from "../store/gameStore";
 
 export function AdventureLog() {
-	const { log, dmTyping } = useGameStore();
+	const { log, logVersion, dmTyping } = useGameStore();
 	const bottomRef = useRef<HTMLDivElement>(null);
 	const scrollContainerRef = useRef<HTMLDivElement>(null);
 	const userScrolledUp = useRef(false);
 
-	// Track if user has scrolled up manually
 	const handleScroll = () => {
 		const el = scrollContainerRef.current;
 		if (!el) return;
@@ -16,12 +15,12 @@ export function AdventureLog() {
 		userScrolledUp.current = !atBottom;
 	};
 
-	// Auto-scroll only if user hasn't scrolled up. Uses logVersion (not log.length) so it works past 500 entries.
 	useEffect(() => {
+		if (logVersion === 0) return;
 		if (!userScrolledUp.current) {
 			bottomRef.current?.scrollIntoView({ behavior: "smooth" });
 		}
-	}, []);
+	}, [logVersion]);
 
 	return (
 		<div className="bg-slate-800/80 rounded-lg border border-slate-700 h-full flex flex-col">

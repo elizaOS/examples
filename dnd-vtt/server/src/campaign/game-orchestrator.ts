@@ -1,15 +1,8 @@
-/**
- * Game Orchestrator
- * Coordinates the flow of the game between DM and player agents
- */
-
 import type { AgentRuntime } from '@elizaos/core';
 import type { Server as SocketIOServer } from 'socket.io';
 import type { SessionState } from './session-manager';
-import type { CharacterSheet, GameTime, Campaign, Monster, DamageType } from '../types';
+import type { CharacterSheet, Campaign, DamageType } from '../types';
 import { 
-  startSession, 
-  endSession, 
   recordEvent,
   visitLocation,
   interactWithNPC,
@@ -28,7 +21,6 @@ import {
   endCombat,
   getCombatSummary,
   logCombatToDatabase,
-  getCurrentCombatant,
   type CombatEncounter,
 } from '../combat';
 import {
@@ -78,9 +70,6 @@ export interface GameState {
   _openingNarration?: string;
 }
 
-/**
- * Create a new game orchestrator
- */
 export function createGameOrchestrator(): GameState {
   return {
     phase: 'initializing',
@@ -94,74 +83,6 @@ export function createGameOrchestrator(): GameState {
   };
 }
 
-/**
- * Initialize a game session
- */
-export async function initializeGame(
-  state: GameState,
-  campaignId: string,
-  dmAgent: AgentRuntime,
-  playerAgents: Map<string, AgentRuntime>
-): Promise<GameState> {
-  // Start the session
-  const { session, state: sessionState } = await startSession(campaignId);
-  
-  // Set up agents
-  state.dmAgent = dmAgent;
-  state.playerAgents = playerAgents;
-  state.sessionState = sessionState;
-  state.phase = 'narration';
-  state.lastUpdate = new Date();
-  
-  // Configure DM agent with session context
-  await dmAgent.setSetting('sessionId', session.id);
-  await dmAgent.setSetting('campaignId', campaignId);
-  await dmAgent.setSetting('campaignState', JSON.stringify({
-    currentTime: sessionState.currentTime,
-    currentLocationId: sessionState.currentLocationId,
-  }));
-  
-  // Configure player agents
-  for (const [characterId, agent] of playerAgents) {
-    await agent.setSetting('sessionId', session.id);
-    await agent.setSetting('campaignId', campaignId);
-    await agent.setSetting('characterId', characterId);
-  }
-  
-  return state;
-}
-
-/**
- * End the current game session
- */
-export async function endGame(
-  state: GameState,
-  notes?: string
-): Promise<void> {
-  if (!state.sessionState) {
-    throw new Error('No active session to end');
-  }
-  
-  state.phase = 'ending';
-  
-  // End any active combat
-  if (state.combatEncounter && state.combatEncounter.status === 'active') {
-    state.combatEncounter = endCombat(state.combatEncounter, 'Session ended');
-  }
-  
-  // Save session
-  await endSession(state.sessionState.sessionId, state.sessionState, notes);
-  
-  // Clean up
-  state.sessionState = null;
-  state.combatEncounter = null;
-  state.turnQueue = [];
-  state.pendingActions = [];
-}
-
-/**
- * Transition to a new game phase
- */
 export async function transitionPhase(
   state: GameState,
   newPhase: GamePhase,
@@ -307,12 +228,13 @@ export async function processPlayerAction(
       
     case 'narration':
     case 'transition':
-      // Process the action first, THEN transition phase (so the DM response
-      // arrives before the phase_change event, preventing UI confusion)
-      state.phase = 'exploration'; // Update internal state immediately
+      state.phase = 'exploration';
       result = await processNonCombatAction(state, characterId, action);
-      // Now broadcast the phase change to clients
-      await transitionPhase(state, 'exploration');
+      try {
+        await transitionPhase(state, 'exploration');
+      } catch (err) {
+        console.error('Failed to transition phase after narration:', err);
+      }
       break;
       
     case 'rest':
@@ -635,12 +557,12 @@ async function processCombatAction(
     const cid = state.sessionState?.campaignId ?? '';
     const partyIds = state._characters?.filter(c => c.id).map(c => c.id!) ?? [];
     for (const pid of partyIds) {
-    storeCharacterMemory(
-      pid, cid,
-      `Combat encounter: ${endCheck.reason}. ${endMessage.replace(/\n/g, ' ')}`,
-      'combat', 7,
-      endCheck.winners === 'party' ? 3 : -3,
-    ).catch((err: Error) => console.error(`Failed to store combat memory for ${pid}:`, err.message));
+      storeCharacterMemory(
+        pid, cid,
+        `Combat encounter: ${endCheck.reason}. ${endMessage.replace(/\n/g, ' ')}`,
+        'combat', 7,
+        endCheck.winners === 'party' ? 3 : -3,
+      ).catch((err: Error) => console.error(`Failed to store combat memory for ${pid}:`, err.message));
     }
   }
   

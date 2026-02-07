@@ -25,5 +25,5 @@
     }
   },
   "include": ["**/*.ts", "**/*.tsx", "**/*.js", "postcss.config.js"],
-  "exclude": ["node_modules", "fly"]
+  "exclude": ["node_modules", "fly", "vite.config.ts"]
 }

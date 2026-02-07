@@ -8,6 +8,10 @@ out/
 pkg/
 target/
 .next/
+*.tsbuildinfo
+
+# Runtime data
+.eliza/
 
 # ICP
 .dfx/
@@ -39,3 +43,10 @@ venv/
 package-lock.json
 pnpm-lock.yaml
 yarn.lock
+
+# Backup/temp files
+*.bak
+*.tmp
+*.swp
+*.swo
+*.orig
